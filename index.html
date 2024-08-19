@@ -12,32 +12,82 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              roboto: ["Roboto"],
+              bebas: ["Bebas Neue"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="">
+  <body class="font-roboto">
     <!-- header section -->
     <section class="header bg-[#FFFBF0]">
       <!-- header container -->
-      <div class="w-[60%] mx-auto">
-        <nav class="flex justify-between">
+      <div class="w-[100%] px-4 md:w-[80%] md:px-0 mx-auto lg:w-[60%] lg:px-0">
+        <!-- nav bar -->
+        <nav class="flex justify-between py-6">
           <img src="./icons/logo.png" alt="" class="w-56 h-8" />
-          <div class="flex gap-10">
-            <p>Home</p>
-            <p>Product</p>
-            <p>About us</p>
-            <p>Contact us</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 md:hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+
+          <div class="hidden md:flex gap-10">
+            <p class="font-medium">Home</p>
+            <p class="font-medium">Product</p>
+            <p class="font-medium">About us</p>
+            <p class="font-medium">Contact us</p>
           </div>
         </nav>
+        <!-- hero section -->
+        <div class="hero md:flex gap-3 lg:gap-60 pb-16">
+          <div class="mt-3">
+            <h1 class="font-bebas text-6xl/[75px] mt-10">
+              <span class="text-[#FABE4C]">Be the Penguins </span><br />
+              <span class="text-[#363958]">of Winter</span>
+            </h1>
+            <p class="mt-2 text-[#3E3E3E]">
+              Lorem Ipsum is simply dummy text of the printing <br> and typesetting
+              industry.
+            </p>
+            <button class="bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white flex gap-1 items-center rounded-md py-3 px-6 my-2">
+               <img src="icons/shopping-cart 1.png " alt="" class="h-5">
+               <p>BUY NOW</p>
+            </button>
+          </div>
+          <div>
+            <img src="./images/model.png" alt="">
+          </div>
+        </div>
       </div>
     </section>
+    <!-- body section -->
+     <section class="w-[100%] px-4 mx-auto  md:w-[80%] md:px-0 lg:w-[60%] lg:px-0 mt-10">
+        <!-- woman section -->
+         <div class="woman">
+            <h1 class="font-bebas text-5xl text-[#363958] mb-7">Woman Jacket</h1>
+            <div class="card flex gap-2 justify-between">
+
+            </div>
+         </div>
+     </section>
   </body>
 </html>
